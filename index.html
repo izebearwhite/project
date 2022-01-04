@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <div class="container" >
+        <ul id="emotion">
+            <li  @click="Like(10)"><img src="/picture/like.png" alt=""> {{like}} </li>
+            <li  @click="Love(20)"><img src="/picture/love.png" alt="">{{love}}</li>
+            <li  @click="Laugh(25)"><img src="/picture/laugh.png" alt="">{{laugh}}</li>
+            <li  @click="Wow(30)"><img src="/picture/wow.png" alt="">{{wow}}</li>
+            <li  @click="Sad(-15)"><img src="/picture/sad.png" alt="">{{sad}}</li>
+            <li  @click="Angry(-50)"><img src="/picture/angry.png" alt="">{{angry}}</li>
+            <p>point : {{sumary}}</p>
+        </ul>
+        <div class="pop" id="popcat">
+            <img id="click" @click="press" src="picture/podong.jpg" alt="">
+            <p>pop : {{time}}</p>
+        </div>
+        <div id="wrap">
+            <div class="Hero">
+                <div class="hero">
+                    <div class="helth">
+                        <div class="currentHelth" v-bind:style = "{width:hpH + 'px'}"></div>
+                    </div>
+                    <img src="picture/hikun.jpg" alt="">
+                </div>
+                <div class="monster">
+                    <div class="helth">
+                        <div class="currentHelth" v-bind:style = "{width:hpM + 'px'}"></div>
+                    </div>
+                    <img src="picture/mike.jpg" alt="">
+                </div>
+            </div>
+            <div class="btn">
+                <button @click="attack(1)">Attack</button>
+                <button @click="attack(2)">Speceial Attack</button>
+                <button @click="attack(3)">reset</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+<script src = "emotion.js"></script>
+<script src = "popcat.js"></script>
+<script src = "button.js"></script>
